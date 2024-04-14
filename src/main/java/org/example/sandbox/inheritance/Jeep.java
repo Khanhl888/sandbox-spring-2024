@@ -1,24 +1,54 @@
 package org.example.sandbox.inheritance;
 
+
 import java.awt.*;
 
-public class Jeep {
-    public class Jeep extends SportUtilityVehicle {
+public class Jeep extends SportUtilityVehicle {
 
-        private Color color;
-        protected Double gasMileage;
-        @@ -40,4 +40,14 @@ public Double getTowingCapacity() {
-            public void setTowingCapacity(Double towingCapacity) {
-                this.towingCapacity = towingCapacity;
-            }
+    private Color color;
+    protected Double gasMileage;
+    private Double towingCapacity;
 
-            @Override
-            public int getNumberOfSeats() {
-                return numberOfSeats + 1;
-            }
+    public Jeep() {
+    }
 
-            @Override
-            public void transport() {
+    public Jeep(Color color, Double gasMileage, Double towingCapacity) {
+        this.color = color;
+        this.gasMileage = gasMileage;
+        this.towingCapacity = towingCapacity;
+    }
 
-            }
-        }
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Double getGasMileage() {
+        return gasMileage;
+    }
+
+    public void setGasMileage(Double gasMileage) {
+        this.gasMileage = gasMileage;
+    }
+
+    public Double getTowingCapacity() {
+        return towingCapacity;
+    }
+
+    public void setTowingCapacity(Double towingCapacity) {
+        this.towingCapacity = towingCapacity;
+    }
+
+    @Override
+    public int getNumberOfSeats() {
+        return numberOfSeats + 1;
+    }
+
+    @Override
+    public void transport() {
+
+    }
+}
